@@ -1,15 +1,22 @@
 import level00
 import level01
+import level02
 
 
 def main() -> None:
-    print("Hello from overthewire!")
+    print("Hello from OvertheWire!")
     nextpass = level00.main()
     print(f"Level 0 -> Level 1: {nextpass}")
 
     if nextpass is not None:
         nextpass = level01.main(nextpass)
         print(f"Level 1 -> Level 2: {nextpass}")
+    else:
+        return
+
+    if nextpass is not None:
+        nextpass = level02.main(nextpass)
+        print(f"Level 2 -> Level 3: {nextpass}")
     else:
         return
 
