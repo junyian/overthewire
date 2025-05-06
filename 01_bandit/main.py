@@ -4,6 +4,7 @@ import level02
 import level03
 import level04
 import level05
+import level06
 
 
 def main() -> None:
@@ -38,6 +39,12 @@ def main() -> None:
     if nextpass is not None:
         nextpass = level05.main(nextpass)
         print(f"Level 5 -> Level 6: {nextpass}")
+    else:
+        return
+
+    if nextpass is not None:
+        nextpass = level06.main(nextpass)
+        print(f"Level 6 -> Level 7: {nextpass}")
     else:
         return
 
